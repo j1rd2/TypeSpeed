@@ -14,9 +14,19 @@ void showMenu()
 int getMenuOption()
 {
     int option = 0;
-    std::cin >> option;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    return option;
+
+
+    while(true)
+    {
+        if (std::cin >> option)
+        {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            return option;
+        }
+        std::cout << "Invalid input. Please enter a number";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 }
 
 void handleMenuOption(int option)
