@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Menu.h"
 
 int main() 
 {
@@ -9,11 +10,7 @@ int main()
     std::cout << "       Welcome      " << std::endl;
     std::cout << "=====================" << std::endl;
 
-    std::cout << "Enter your name: ";
-    std::cin >> name;
-
-    std::cout << "Welcome, " << name << std::endl;
-    std::cout << "Get ready!" << std::endl;
+    runMenu();
 
     return 0;
 }
