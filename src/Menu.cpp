@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "Game.h"
 #include <iostream>
 
 void showMenu()
@@ -22,6 +23,7 @@ void handleMenuOption(int option)
     {
     case 1:
         std::cout << "Starting game..." << std::endl;
+        startGame();
         break;
     case 2:
         std::cout << "Showing Instructions... " << std::endl;
