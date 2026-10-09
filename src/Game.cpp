@@ -8,7 +8,14 @@ void showSentence()
     std::cout << sentence << std::endl;
 }
 
+void playerInput()
+{
+    std::string input;
+    std::getline(std::cin >> std::ws, input);
+}
+
 void startGame()
 {
     showSentence();
+    playerInput();
 }

@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Game.h"
 #include <iostream>
+#include <limits>
 
 void showMenu()
 {
@@ -14,6 +15,7 @@ int getMenuOption()
 {
     int option = 0;
     std::cin >> option;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return option;
 }
 
